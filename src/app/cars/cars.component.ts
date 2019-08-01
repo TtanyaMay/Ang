@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class CarsComponent  {
 
 addCarStatus = '';
-inputText = '';
+inputText = '1dd';
 
   constructor(){
     }
