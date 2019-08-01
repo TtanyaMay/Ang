@@ -1,2 +1,14 @@
+
+<button class='btn btn-primary' (click)="addCar()">Put there the car</button>
+
+<p> {{addCarStatus }}</p>
+<hr>
+
 <app-car></app-car>
 <app-car></app-car>
+<hr>
+
+<input type="text"  (keyup.enter)= "onKeyUp($event)">
+<br>
+<input type="text" >
+<p>{{ inputText}}</p>
