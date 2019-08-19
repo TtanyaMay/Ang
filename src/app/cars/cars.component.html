@@ -1,14 +1,5 @@
 
-<button class='btn btn-primary' (click)="addCar()">Put there the car</button>
-
-<p> {{addCarStatus }}</p>
+<app-add-car (onAddCar) = "updateCarList($event)"></app-add-car>
 <hr>
 
-<app-car></app-car>
-<app-car></app-car>
-<hr>
-
-<input type="text"  (keyup.enter)= "onKeyUp($event)">
-<br>
-<input type="text" [(ngModel)]="inputText">
-<p>{{ inputText}}</p>
+<app-car *ngFor = "let car of cars" [carItem]="car"></app-car>

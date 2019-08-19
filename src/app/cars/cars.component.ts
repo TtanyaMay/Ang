@@ -7,17 +7,20 @@ import { Component } from '@angular/core';
 })
 export class CarsComponent  {
 
-addCarStatus = '';
-inputText = '1dd';
-
+cars: {name: string, year: number}[] = [{
+  name: 'Ford',
+  year: 2015
+},  {
+  name: 'Mersedes',
+  year: 2019
+  },{
+    name: 'BMW',
+    year: 2020
+}];
   constructor(){
     }
 
-  addCar(){
-    this.addCarStatus = 'The car is added';
-  }
-  onKeyUp(event){
-
-    this.inputText = event.target.value;
-  }
+  updateCarList(car: {name:string, year:number}){
+    this.cars.push(car);
+    };
 }
