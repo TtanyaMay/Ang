@@ -1,4 +1,11 @@
-<input type="text" class="form-control" [(ngModel)] = "carName">
-<input type="text" class="form-control" [(ngModel)]= "carYear">
+<!-- <input type="text" class="form-control" [(ngModel)] = "carName"> --><!-- (1) -->
+<!-- Реализация two way biding  без ngModel -->
 
-<button class='btn btn-primary' (click)="addCar()"> Добавить машину </button>
+<input type="text" class="form-control" #carNameInput> <!--  (1) -->
+
+
+
+<!-- <input type="text" class="form-control" [(ngModel)]= "carYear"> --><!-- (2)  -->
+<input type="text" class="form-control" #carYearInput>
+
+<button class='btn btn-primary' (click)="addCar(carNameInput)"> Добавить машину </button>
